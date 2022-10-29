@@ -13,4 +13,8 @@ export class Bungram {
     public getMe() : Promise<Ret<'getMe'>> {
         return req(`${this.ENDPOINT}/getMe`);
     }
+
+    public logOut() : Promise<Ret<'logOut'>> {
+       return req(`${this.ENDPOINT}/logOut`);
+    }
 }
