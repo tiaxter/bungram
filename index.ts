@@ -21,4 +21,8 @@ export class Bungram {
     public close() : Promise<Ret<'close'>> {
         return req(`${this.ENDPOINT}/close`);
     }
+
+    public sendMessage(params: Opts<'sendMessage'>) : Promise<Ret<'sendMessage'>> {
+       return req(`${this.ENDPOINT}/sendMessage`);
+    }
 }
