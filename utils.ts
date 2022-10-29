@@ -7,5 +7,11 @@ export async function req(endpoint: string, params: any = {}) {
         },
         body: JSON.stringify(params),
     }).then(res => res.json());
+
+    // Handle error throwing
+    if (!response.ok) {
+        throw new Error(response.description);
+    }
+
     return response.result;
 }
