@@ -23,6 +23,6 @@ export class Bungram {
     }
 
     public sendMessage(params: Opts<'sendMessage'>) : Promise<Ret<'sendMessage'>> {
-       return req(`${this.ENDPOINT}/sendMessage`);
+       return req(`${this.ENDPOINT}/sendMessage`, params);
     }
 }
