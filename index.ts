@@ -29,4 +29,8 @@ export class Bungram {
     public forwardMessage(params: Opts<'forwardMessage'>) : Promise<Ret<'forwardMessage'>> {
        return req(`${this.ENDPOINT}/forwardMessage`, params);
     }
+
+    public copyMessage(params: Opts<'copyMessage'>) : Promise<Ret<'copyMessage'>> {
+        return req(`${this.ENDPOINT}/copyMessage`, params);
+    }
 }
