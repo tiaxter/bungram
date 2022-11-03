@@ -89,3 +89,9 @@ test("sendChatAction", async () => {
         action: "typing",
     });
 });
+
+test("getUserProfilePhotos", async () => {
+    await bot.getUserProfilePhotos({
+        user_id: parseInt(process.env.CHAT_ID),
+    });
+});
