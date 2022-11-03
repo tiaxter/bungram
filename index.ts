@@ -33,4 +33,11 @@ export class Bungram {
     public copyMessage(params: Opts<'copyMessage'>) : Promise<Ret<'copyMessage'>> {
         return req(`${this.ENDPOINT}/copyMessage`, params);
     }
+
+    // TODO: must implement methods: sendPhoto, sendAudio, sendDocument, sendVideo, sendAnimation,
+    //                               sendVoice, sendVideoNote, sendMediaGroup
+
+    public sendLocation(params: Opts<'sendLocation'>) : Promise<Ret<'sendLocation'>> {
+        return req(`${this.ENDPOINT}/sendLocation`, params);
+    }
 }
