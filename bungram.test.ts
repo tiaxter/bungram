@@ -70,3 +70,11 @@ test("sendContact", async () => {
         first_name: "John Doe",
     });
 });
+
+test("sendPoll", async () => {
+    await bot.sendPoll({
+        chat_id: process.env.CHAT_ID,
+        question: "What's your favourite program language?",
+        options: ["PHP", "JavaScript", "GoLang", "HTML"],
+    });
+})
