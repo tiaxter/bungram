@@ -121,3 +121,11 @@ test("restrictChatMember", async () => {
         },
     });
 });
+
+test("promoteChatMember", async () => {
+    await bot.promoteChatMember({
+        chat_id: process.env.GROUP_ID,
+        user_id: parseInt(process.env.BANNABLE_USER_ID),
+        can_pin_messages: true,
+    });
+});
