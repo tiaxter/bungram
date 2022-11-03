@@ -96,6 +96,7 @@ test("getUserProfilePhotos", async () => {
     });
 });
 
+/*
 test("banChatMember", async () => {
     await bot.banChatMember({
         chat_id: process.env.GROUP_ID,
@@ -107,5 +108,16 @@ test("unbanChatMember", async () => {
     await bot.unbanChatMember({
         chat_id: process.env.GROUP_ID,
         user_id: parseInt(process.env.BANNABLE_USER_ID),
+    });
+});
+*/
+
+test("restrictChatMember", async () => {
+    await bot.restrictChatMember({
+        chat_id: process.env.GROUP_ID,
+        user_id: parseInt(process.env.BANNABLE_USER_ID),
+        permissions: {
+            can_pin_messages: false,
+        },
     });
 });
