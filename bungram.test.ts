@@ -14,8 +14,6 @@ test("sendMessage", async () => {
     });
 });
 
-let liveLocationMessageId;
-
 test("sendLocation", async () => {
     await bot.sendLocation({
         chat_id: process.env.CHAT_ID,
