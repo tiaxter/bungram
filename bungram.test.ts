@@ -129,3 +129,11 @@ test("promoteChatMember", async () => {
         can_pin_messages: true,
     });
 });
+
+test("setChatAdministratorCustomTitle", async () => {
+    await bot.setChatAdministratorCustomTitle({
+        chat_id: process.env.GROUP_ID,
+        user_id: parseInt(process.env.BANNABLE_USER_ID),
+        custom_title: "Sviluppino Typescript",
+    });
+});

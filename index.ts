@@ -19,6 +19,7 @@ const availableMethods: Method[] = [
     'unbanChatMember',
     'restrictChatMember',
     'promoteChatMember',
+    'setChatAdministratorCustomTitle',
 ];
 
 type HasMethods = { [k in typeof availableMethods[number]]: (params?: Opts<k>) => Promise<Ret<k>> }
