@@ -75,4 +75,10 @@ test("sendPoll", async () => {
         question: "What's your favourite program language?",
         options: ["PHP", "JavaScript", "GoLang", "HTML"],
     });
-})
+});
+
+test("sendDice", async () => {
+    await bot.sendDice({
+        chat_id: process.env.CHAT_ID,
+    });
+});
