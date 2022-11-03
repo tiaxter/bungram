@@ -15,6 +15,8 @@ const availableMethods: Method[] = [
     'sendDice',
     'sendChatAction',
     'getUserProfilePhotos',
+    'banChatMember',
+    'unbanChatMember',
 ];
 
 type HasMethods = { [k in typeof availableMethods[number]]: (params?: Opts<k>) => Promise<Ret<k>> }
