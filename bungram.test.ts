@@ -82,3 +82,10 @@ test("sendDice", async () => {
         chat_id: process.env.CHAT_ID,
     });
 });
+
+test("sendChatAction", async () => {
+    await bot.sendChatAction({
+        chat_id: process.env.CHAT_ID,
+        action: "typing",
+    });
+});
